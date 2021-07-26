@@ -1,0 +1,123 @@
+:root {
+    --tree: hsla(78, 72%, 45%, 0.836);
+    --grass: rgb(102, 138, 56);
+}
+
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--tree);
+    background:linear-gradient(45deg, var(--tree), var(--grass));
+    overflow:hidden;
+    font-family: 'Pacifico', cursive;
+    color:rgb(23, 68, 29)
+}
+
+
+.container {
+    width: 66%;
+    height:66%;
+    background: rgba(0,0,0,0.50);
+    background: linear-gradient(45deg, rgba(0,0,0,0.30), rgba(0,0,0,0.15));
+    border-radius: 20px;
+    padding: 32px 92px;
+    position: relative;
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
+
+.bg__img {
+    position:absolute;
+}
+
+.bg__img--birds {
+    top:0;
+    right:70%;
+    height:50vh;
+    animation: slideDown 10s;
+    animation-fill-mode: forwards;
+
+}
+
+.bg__img--flock {
+    top: -15vh;
+    left:50%;
+    height: 75vh;
+    
+}
+
+@keyframes slideDown {
+    from{transform:translateY(-30vh)}
+    to {transform:translateY(60vh)}
+}
+
+h1 {
+    font-size:48px;
+    color: rgba(3, 27, 7, 0.842);
+}
+
+p {
+    font-size:20px;
+    padding: 5px;
+}
+
+p2 {
+    color:  rgba(3, 27, 7, 0.842);
+}
+
+a {
+    text-decoration:none;
+    color: rgb(23, 68, 29, 0.75);
+    
+}
+
+a:hover {
+    color: rgb(23, 68, 29, 0.35);
+
+}
+
+.link__border {
+    width:100%;
+    height: 3px;
+    background-color:var(--tree);
+    background:linear-gradient(90deg, transparent, var(--tree));
+    position:absolute;
+    top: 100%;
+    left:0;
+   
+
+}
+
+button {
+    width:250px;
+    font-size:42px;
+    font-family: 'Pacifico', cursive;
+    font-weight:300;
+    color:rgba(3, 27, 7, 0.842);
+    border-radius:4px;
+    border:  black;
+    background: var(--grass);
+    background:linear-gradient(45deg, var(--tree), var(--grass));
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+    margin-top:80px;
+    margin-left:40px;
+   
+}
+button:hover {
+    color:rgb(66, 90, 34);
+}
+
+main {
+   float:right;
+}
